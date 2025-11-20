@@ -306,7 +306,18 @@ footer {
 /* MEDIA QUERY PARA TABLETS            */
 /* ========================================= */
 @media screen and (min-width: 601px) and (max-width: 992px) {
+    /* ... dentro de @media screen and (max-width: 600px) { ... } */
     
+    /* Novo ajuste para Responsividade de Habilidades */
+    .habilidades-container {
+        flex-direction: column; /* Empilha os grupos */
+        gap: 20px;
+    }
+    
+    .habilidade-grupo {
+        max-width: 100%; /* Ocupa a largura total */
+    }
+
     .projetos-container {
         /* Garante que o gap funcione bem com 2 colunas */
         gap: 20px;
@@ -316,4 +327,53 @@ footer {
         /* Faz com que dois cartões caibam por linha */
         flex: 1 1 calc(50% - 10px); /* 50% menos a metade do gap */
     }
+/* ... fim da Media Query ... */
+}
+/* ESTILIZAÇÃO DA SEÇÃO DE HABILIDADES */
+#habilidades {
+    background-color: #f4f4f9; /* Fundo levemente diferente para contraste */
+    text-align: center;
+}
+
+/* Container que organiza os grupos de habilidades lado a lado */
+.habilidades-container {
+    display: flex;
+    justify-content: center; /* Centraliza os grupos */
+    gap: 40px; /* Espaço entre os grupos */
+    flex-wrap: wrap; /* Permite quebrar em telas menores */
+    margin-top: 30px;
+}
+
+/* Estilo de cada grupo de habilidade */
+.habilidade-grupo {
+    background-color: #fff;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    /* Garante que ocupe no máximo 300px, mas seja flexível */
+    flex: 1 1 250px; 
+    max-width: 300px;
+    text-align: left;
+}
+
+.habilidade-grupo h3 {
+    color: #007bff;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+/* Estilo para cada item da lista de habilidade */
+.habilidade-grupo ul li {
+    padding: 8px 0;
+    font-size: 1rem;
+    color: #555;
+}
+
+.habilidade-grupo ul li i {
+    /* Estilo para os ícones */
+    margin-right: 10px;
+    color: #333; /* Cor dos ícones */
+    width: 20px; /* Garante que os ícones fiquem alinhados */
+    text-align: center;
 }
