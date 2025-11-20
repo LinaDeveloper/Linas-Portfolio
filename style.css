@@ -1,0 +1,319 @@
+/* ESTILIZAÇÃO DA LISTA DE ÍCONES SOCIAIS */
+.social-icons {
+    display: flex; /* Alinha os itens lado a lado */
+    justify-content: center; /* Centraliza a lista */
+    gap: 30px; /* Espaço entre os links */
+    margin-top: 20px;
+}
+
+.social-icons li a {
+    color: #333; /* Cor do texto e ícone padrão */
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.social-icons li a:hover {
+    color: #007bff; /* Cor ao passar o mouse */
+}
+
+/* Estilo específico para o ícone, para separá-lo do texto */
+.social-icons li a i {
+    margin-right: 8px; 
+    font-size: 1.4rem; /* Ícone um pouco maior */
+    vertical-align: middle; /* Alinha o ícone com o texto */
+}
+/* RESET BÁSICO */
+* {
+    /* Remove margens e preenchimentos padrão */
+    margin: 0;
+    padding: 0;
+    /* Faz o cálculo do tamanho do elemento de forma mais previsível */
+    box-sizing: border-box; 
+}
+
+/* ESTILO GERAL DO CORPO */
+/* ESTILO GERAL DO CORPO - MODIFICADO */
+body {
+    font-family: 'Roboto', sans-serif; /* Fonte mais clean para o corpo do texto */
+    line-height: 1.6; 
+    background-color: #f4f4f9; 
+    color: #333; 
+}
+/* TIPOGRAFIA PARA TÍTULOS */
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif; /* Fonte de destaque para títulos */
+    color: #333;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+}
+
+h1 {
+    font-size: 2.5rem; /* Título principal */
+}
+
+h2 {
+    font-size: 2rem; /* Títulos de seção */
+    margin-bottom: 1.5rem;
+}
+
+h3 {
+    font-size: 1.4rem; /* Títulos de cartão */
+}
+/* REMOVE ESTILO PADRÃO DE LISTAS */
+ul {
+    list-style: none;
+}
+
+/* REMOVE SUBLINHADO DE LINKS */
+a {
+    color: #007bff; /* Cor azul para links */
+    text-decoration: none;
+}
+
+/* ⚠️ MODIFICAÇÃO NO ESTILO DO CABEÇALHO (HEADER) */
+header {
+    background: #fabfe1; 
+    color: #fff; 
+    padding: 1rem 2rem; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    
+    /* 📌 PROPRIEDADES PARA FIXAR */
+    position: fixed; /* Fixa o elemento na janela de visualização */
+    top: 0; /* Alinha no topo */
+    left: 0; /* Alinha na esquerda */
+    width: 100%; /* Ocupa a largura total da tela */
+    z-index: 1000; /* Garante que o menu fique por cima de outros elementos */
+}
+
+/* ESTILIZAÇÃO DA NAVEGAÇÃO (NAV) */
+header nav ul {
+    display: flex; /* Coloca os itens do menu lado a lado */
+    gap: 20px; /* Espaço entre os itens */
+}
+
+header nav ul li a {
+    color: #fff;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s; /* Transição suave ao passar o mouse */
+}
+
+header nav ul li a:hover {
+    background-color: #555; /* Mudar cor de fundo ao passar o mouse */
+    border-radius: 5px;
+}
+
+/* ESTILIZAÇÃO DAS SEÇÕES */
+section {
+    padding: 40px 20px;
+    margin: 20px 0;
+}
+
+/* Exemplo de Estilo para a Seção Hero (Apresentação) */
+.hero {
+    text-align: center;
+    background-color: #fff;
+    border-bottom: 2px solid #ddd;
+}
+/* ESTILIZAÇÃO DA IMAGEM DE PERFIL */
+.perfil-foto {
+    /* Define o tamanho da imagem */
+    width: 200px;
+    height: 200px;
+    
+    /* Faz a imagem ficar redonda */
+    border-radius: 50%; 
+    
+    /* Garante que a imagem preencha o espaço sem distorcer (cortando as bordas se necessário) */
+    object-fit: cover; 
+    
+    /* 📌 CÓDIGO PARA CENTRALIZAR O ROSTO */
+    object-position: center bottom;
+
+    /* Adiciona um pequeno espaço abaixo dela */
+    margin: 20px auto; 
+    
+    /* Adiciona uma borda sutil */
+    border: 5px solid #fff; 
+    
+    /* Adiciona uma sombra para destacá-la */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    
+    /* Garante que ela seja tratada como um bloco centralizado no texto */
+    display: block; 
+}
+
+/* Ajusta o estilo da seção hero para garantir o espaçamento correto */
+.hero h2 {
+    margin-bottom: 20px;
+}
+/* ESTILIZAÇÃO DA SEÇÃO DE PROJETOS */
+#projetos {
+    background-color: #fff;
+    text-align: center;
+}
+
+/* CONTAINER (Pai) que irá organizar os cartões */
+.projetos-container {
+    display: flex; /* Habilita o Flexbox */
+    flex-wrap: wrap; /* Permite que os cartões quebrem para a linha de baixo */
+    gap: 20px; /* Espaço entre os cartões */
+    justify-content: center; /* Centraliza os cartões no contêiner */
+    padding: 20px 0;
+}
+
+/* ESTILO DE CADA CARTÃO DE PROJETO (Filho) */
+.projeto-card {
+    /* Define a largura para que caibam 2 ou 3 por linha em telas maiores */
+    /* Calculando 3 por linha, com 20px de espaço entre eles: */
+    flex: 1 1 300px; /* flex-grow: 1, flex-shrink: 1, flex-basis: 300px */
+    
+    margin: 5%;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: left; /* Alinha o texto dentro do cartão à esquerda */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Sombra suave */
+    transition: transform 0.3s ease-in-out; /* Transição para o efeito hover */
+}
+
+.projeto-card:hover {
+    /* Efeito de leve levantamento ao passar o mouse */
+    transform: translateY(-5px); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); 
+}
+
+.projeto-card h3 {
+    color: #fabfe1;
+    margin-bottom: 10px;
+}
+
+.projeto-card p {
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+.projeto-card a {
+    display: inline-block; /* Permite dar padding e margem */
+    background-color: #fabfe1;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.projeto-card a:hover {
+    background-color: #fabfe1;
+}
+/* 📌 COMPENSAÇÃO PARA O CONTEÚDO PRINCIPAL (MAIN) */
+main {
+    /* Altura do header: ~60px + o padding que você definiu */
+    padding-top: 80px; /* Adapte este valor se o seu header for mais alto */
+}
+/* 📌 ESTILIZAÇÃO DO RODAPÉ (FOOTER) */
+footer {
+    background-color: #fabfe1; /* Fundo escuro, combinando com o header */
+    color: #fff; /* Texto claro */
+    text-align: center; /* Centraliza o texto */
+    padding: 1.5rem 0; /* Espaçamento interno (topo e base) */
+    margin-top: 40px; /* Espaço entre a última seção e o rodapé */
+    font-size: 0.9rem; /* Fonte um pouco menor */
+}
+/* ESTILIZAÇÃO DA LISTA DE ÍCONES SOCIAIS */
+.social-icons {
+    display: flex; /* Alinha os itens lado a lado */
+    justify-content: center; /* Centraliza a lista */
+    gap: 30px; /* Espaço entre os links */
+    margin-top: 20px;
+}
+
+.social-icons li a {
+    color: #333; /* Cor do texto e ícone padrão */
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.social-icons li a:hover {
+    color: #007bff; /* Cor ao passar o mouse */
+}
+
+/* Estilo específico para o ícone, para separá-lo do texto */
+.social-icons li a i {
+    margin-right: 8px; 
+    font-size: 1.4rem; /* Ícone um pouco maior */
+    vertical-align: middle; /* Alinha o ícone com o texto */
+}
+/* ========================================= */
+/* MEDIA QUERY PARA TELAS PEQUENAS     */
+/* ========================================= */
+@media screen and (max-width: 600px) {
+
+    /* 📌 1. NAVEGAÇÃO (HEADER) */
+    header {
+        /* Transforma de 'space-between' para empilhar no topo */
+        flex-direction: column; 
+        text-align: center;
+        padding: 1rem;
+    }
+
+    header h1 {
+        margin-bottom: 10px; /* Adiciona espaço abaixo do título */
+    }
+
+    header nav ul {
+        /* Mantém os links lado a lado, mas reduz o espaço */
+        gap: 10px;
+        padding-bottom: 5px;
+    }
+
+    /* 📌 2. PROJETOS (Cartões) */
+    .projetos-container {
+        /* Remove o justify-content center em telas muito pequenas para usar a largura total */
+        justify-content: flex-start;
+    }
+
+    .projeto-card {
+        /* Garante que o cartão ocupe quase a largura total da tela */
+        flex: 1 1 100%; 
+        max-width: 100%;
+    }
+
+    /* 📌 3. FOTO DE PERFIL */
+    .perfil-foto {
+        /* Reduz o tamanho da foto para caber melhor no celular */
+        width: 150px;
+        height: 150px;
+    }
+
+    /* 📌 4. AJUSTES GERAIS */
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    /* 📌 5. ÍCONES SOCIAIS */
+    .social-icons {
+        /* Centraliza os ícones */
+        flex-wrap: wrap; 
+    }
+}
+/* ========================================= */
+/* MEDIA QUERY PARA TABLETS            */
+/* ========================================= */
+@media screen and (min-width: 601px) and (max-width: 992px) {
+    
+    .projetos-container {
+        /* Garante que o gap funcione bem com 2 colunas */
+        gap: 20px;
+    }
+
+    .projeto-card {
+        /* Faz com que dois cartões caibam por linha */
+        flex: 1 1 calc(50% - 10px); /* 50% menos a metade do gap */
+    }
+}
